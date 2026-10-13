@@ -18,6 +18,8 @@ SQLite, encrypted API settings, the encryption key and cached market bars are st
 
 ## Interactive demo and walkthrough
 
+[Open the public demo](https://sirusai.github.io/QuantJournal/#/dashboard) · [Practice broker import](https://sirusai.github.io/QuantJournal/#/import-guide) · [Watch the two-minute tour](https://sirusai.github.io/QuantJournal/#/tour)
+
 Explore all remaining features using fictional trades and browser-local editing. AI and market data are clearly labeled simulations; real credentials are disabled in the public demo. Run `npm run demo:build` followed by `npm run demo:preview`, then open `http://127.0.0.1:4173/#/dashboard`. Windows users can run `run_Demo.bat`.
 
 ![QuantJournal feature overview](public/media/quantjournal-features.svg)

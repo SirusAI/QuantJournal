@@ -48,6 +48,8 @@ The original full lint baseline had 128 errors and 38 warnings. The remaining fu
 
 Disposable local acceptance records and credentials were removed after verification; the delivery database is empty. Intentional fictional demo fixtures and screenshots remain in source and public assets. Installed yfinance dependencies remain only under ignored .local/python for local testing. Release archives contain no runtime database, environment, logs, keys, caches or dependency installation.
 
-For acceptance steps, see [TESTING.md](TESTING.md). For publishing and media editing, see [DEMO.md](DEMO.md). The source archive contains the editable local app, demo and video. The static archive contains the built demo and public media only. Serve the static archive over HTTP. Publishing is prepared for your test and has not been performed from this workspace.
+For acceptance steps, see [TESTING.md](TESTING.md). For publishing and media editing, see [DEMO.md](DEMO.md). The source archive contains the editable local app, demo and video. The static archive contains the built demo and public media only. Serve the static archive over HTTP.
+
+The reviewed source was published to [SirusAI/QuantJournal](https://github.com/SirusAI/QuantJournal) on October 13, 2026. GitHub's [first manual Pages run](https://github.com/SirusAI/QuantJournal/actions/runs/38459465807) passed dependency installation, demo TypeScript, tests, privacy scan, static build and deployment. The [public demo](https://sirusai.github.io/QuantJournal/) loads 180 fictional trades. Its sample exercise produced $19 net P&L; downloadable templates and media returned successful responses. All 177 published Git blobs matched the reviewed archive, and the commit used a GitHub noreply email.
 
 The final pre-publication privacy review, including image/video metadata, ignore-rule verification and regenerated archive checks, is recorded in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md).
