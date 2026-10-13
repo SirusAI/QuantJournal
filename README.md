@@ -1,6 +1,6 @@
-# QuantJournal
+# QuantJournal — Local Trading Journal
 
-A local single-user trading journal with performance charts, trade notes, daily reviews, AI coaching and Edge Analysis. Supply your own AI and market-data connections. New installations start empty.
+QuantJournal is a local, self-hosted trading journal for stock traders. Import broker executions, analyze trading performance, keep a daily journal, and generate reviews through your own AI and market-data connections. The full application runs on your computer; the GitHub Pages demo uses fictional data. New local installations start empty.
 
 ## Install and run
 
@@ -18,7 +18,7 @@ SQLite, encrypted API settings, the encryption key and cached market bars are st
 
 ## Interactive demo and walkthrough
 
-[Open the public demo](https://sirusai.github.io/QuantJournal/#/dashboard) · [Practice broker import](https://sirusai.github.io/QuantJournal/#/import-guide) · [Watch the two-minute tour](https://sirusai.github.io/QuantJournal/#/tour)
+[Open the public demo](https://sirusai.github.io/QuantJournal-Local-Trading-Journal/#/dashboard) · [Practice broker import](https://sirusai.github.io/QuantJournal-Local-Trading-Journal/#/import-guide) · [Watch the two-minute tour](https://sirusai.github.io/QuantJournal-Local-Trading-Journal/#/tour)
 
 Explore all remaining features using fictional trades and browser-local editing. AI and market data are clearly labeled simulations; real credentials are disabled in the public demo. Run `npm run demo:build` followed by `npm run demo:preview`, then open `http://127.0.0.1:4173/#/dashboard`. Windows users can run `run_Demo.bat`.
 
