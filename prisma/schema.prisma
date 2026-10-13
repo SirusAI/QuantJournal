@@ -1,0 +1,127 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Trade {
+  id             String      @id @default(uuid())
+  symbol         String
+  date           DateTime
+  status         String      @default("OPEN")
+  direction      String      @default("LONG")
+  notes          String?
+  grossPl        Decimal?
+  netPl          Decimal?
+  volume         Int         @default(0)
+  winLoss        String?
+  mae            Decimal?
+  mfe            Decimal?
+  initialBalance Decimal?    @default(0)
+  isManualPnl    Boolean     @default(false)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+  executions     Execution[]
+  tags           Tag[]       @relation("TagToTrade")
+  review         TradeReview?
+
+  @@index([date])
+}
+
+model TradeReview {
+  id              String   @id @default(uuid())
+  tradeId         String   @unique
+  entryQuality    String?
+  entryNotes      String?
+  exitQuality     String?
+  exitNotes       String?
+  psychologyTags String?
+  psychologyNotes String?
+  riskQuality     String?
+  riskNotes       String?
+  lessonNotes     String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  trade           Trade    @relation(fields: [tradeId], references: [id], onDelete: Cascade)
+
+  @@index([tradeId])
+}
+
+model DailyJournalEntry {
+  id        String   @id @default(uuid())
+  entryDate String   @unique
+  content   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([entryDate])
+}
+
+model Execution {
+  id       String   @id @default(uuid())
+  tradeId  String
+  time     DateTime
+  side     String
+  price    Decimal
+  quantity Int
+  fee      Decimal  @default(0)
+  route    String?
+  broker   String?
+  type     String?
+  pnl      Decimal?
+  trade    Trade    @relation(fields: [tradeId], references: [id])
+
+  @@index([tradeId, time])
+}
+
+model Tag {
+  id     String  @id @default(uuid())
+  name   String  @unique
+  trades Trade[] @relation("TagToTrade")
+}
+
+model CoachingSession {
+  id        String   @id @default(uuid())
+  advice    String
+  stats     String?
+  createdAt DateTime @default(now())
+}
+
+
+model DailyReview {
+  id              String   @id @default(uuid())
+  cacheKey        String   @default("")
+  reviewDate      String   @unique
+  provider        String
+  modelId         String
+  modelName       String?
+  analysisVersion String   @default("v1")
+  tradeCount      Int      @default(0)
+  executionCount  Int      @default(0)
+  renderedReport  String
+  reviewJson      String
+  sourceSnapshot  String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model EdgeAnalysisSession {
+  id                String   @id @default(uuid())
+  scopeKey          String
+  scopeJson         String
+  sourceFingerprint String
+  analysisVersion   String
+  connectionKey     String   @default("")
+  modelId           String
+  modelName         String?
+  summaryJson       String
+  evidenceJson      String
+  createdAt         DateTime @default(now())
+
+  @@index([scopeKey, sourceFingerprint, analysisVersion, modelId, createdAt], map: "EdgeAnalysisSession_cache_idx")
+  @@index([createdAt], map: "EdgeAnalysisSession_createdAt_idx")
+}
+

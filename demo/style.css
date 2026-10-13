@@ -1,0 +1,4 @@
+@import "../app/globals.css";
+@source "../components";
+@source "./";
+body{margin:0;background:#111827;font-family:Arial,Helvetica,sans-serif}button,a,input,select,textarea{touch-action:manipulation}button:focus-visible,a:focus-visible{outline:2px solid #38bdf8;outline-offset:3px}main{min-width:0}main>div,main>section{max-width:100%}video{background:#030712}@media(max-width:767px){main .text-4xl{font-size:1.8rem}main .text-3xl{font-size:1.6rem}main .flex.items-center.justify-between{flex-wrap:wrap;gap:1rem}main .grid-cols-4{grid-template-columns:repeat(2,minmax(0,1fr))}main table{min-width:600px}main [role=tablist]{max-width:100%;height:auto;min-height:2.5rem;overflow-x:auto;overflow-y:hidden;justify-content:flex-start}main [role=tab]{flex-shrink:0}main .overflow-hidden{overflow-x:auto}.demo-banner{position:relative}}

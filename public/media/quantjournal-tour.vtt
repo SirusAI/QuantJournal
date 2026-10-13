@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.000
+QuantJournal: execution history, clearer reviews. Fictional data, synthetic prices, simulated AI.
+
+00:00:06.000 --> 00:00:14.000
+Start with your broker’s executions. Export stock fills as CSV. Holdings and account summaries are different records.
+
+00:00:14.000 --> 00:00:22.000
+Prepare the eight-column template. One CSV per trading date. Convert execution times to America/New_York.
+
+00:00:22.000 --> 00:00:29.000
+Choose the date and import the CSV. A filename such as 06-30-2026.csv overrides the fallback date.
+
+00:00:29.000 --> 00:00:36.000
+Reconcile every fill and fee. Buy 10 at $100 → sell 10 at $102. Gross $20 − fees $1 = net $19.
+
+00:00:36.000 --> 00:00:41.000
+Review the complete trade record. Check price, side, quantity and execution time. Correct mistakes before reviewing results.
+
+00:00:41.000 --> 00:00:43.000
+Edit executions and organize tags. Use execution details and tags to keep your records consistent.
+
+00:00:43.000 --> 00:00:46.000
+Add a trade or paste a compatible table. New Trade supports manual entry and the tab-separated Smart Format template.
+
+00:00:46.000 --> 00:00:54.000
+See performance in one place. Filter your history and inspect P&L, win rate, hold times and fees.
+
+00:00:54.000 --> 00:01:02.000
+Explore your trading calendar. Move between monthly and longer views, then open the trades behind each day.
+
+00:01:02.000 --> 00:01:08.000
+Capture the day before judging it. Save your plan, observations and decisions in Daily Notes.
+
+00:01:08.000 --> 00:01:14.000
+Review process, not just outcome. Evaluate entry, exit, psychology and risk. Record one specific lesson.
+
+00:01:14.000 --> 00:01:19.000
+Compare wins, losses and statistics. Reports summarize the selected period. Sample results describe fictional records.
+
+00:01:19.000 --> 00:01:24.000
+Understand the drawdown. Inspect losing stretches and recovery periods in the Drawdown tab.
+
+00:01:24.000 --> 00:01:30.000
+Explore deterministic Edge Analysis. Compare groups with sample size and evidence limits. Associations are not predictions.
+
+00:01:30.000 --> 00:01:37.000
+Turn the day into a structured review. Daily Review preserves evidence, actions and limitations. This demo response is simulated.
+
+00:01:37.000 --> 00:01:44.000
+Explore AI Coach and saved history. Choose a connection and analyze selected statistics. No provider is contacted in this demo.
+
+00:01:44.000 --> 00:01:50.000
+Configure your own AI in the local app. OpenAI, DeepSeek, Claude, Google, OpenRouter, Nvidia, Ollama and compatible endpoints.
+
+00:01:50.000 --> 00:01:56.000
+Choose market data and interval. yfinance, Massive or custom HTTP. History limits depend on source and interval.
+
+00:01:56.000 --> 00:02:00.000
+Try the sample, explore, reset and repeat. Import real broker records in your local installation.
